@@ -1,23 +1,44 @@
 @import "../../local_modules/normalize.css/normalize";
 
+@import "../mixins/media";
+
+@import "../utils/fonts";
+
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  min-width: 320px;
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  background-color: $sedona-freespace;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.container {
+  min-width: 320px;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }

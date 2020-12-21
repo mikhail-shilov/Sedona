@@ -1,10 +1,73 @@
 @import "../mixins/media";
 
-header {
-    width: 220px;
-    background-color: red;
+.header {
+  background-color: $sedona-white;
 
-    @include media-tablet {
-        width: 500px;
-    }
+  @include media-tablet {
+    background-color: $sedona-white;
+  }
+}
+
+.header__logo {
+  display: block;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header__nav {
+  background-color: $sedona-white;
+}
+
+.nav-menu {
+  height: 56px;
+  display: flex;
+}
+
+.nav-menu__list {
+  display: none;
+  width: 100%;
+
+  @include media-tablet {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+  }
+}
+
+.nav-menu__item {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  width: 153px;
+  text-align: center;
+
+  &--right {
+    width: 153px;
+    text-align: center;
+    margin-left: auto;
+  }
+}
+
+.nav-menu__switcher {
+  margin: 17px 20px auto auto;
+  display: block;
+  width: 23px;
+  height: 22px;
+  padding: 0;
+  background: $sedona-white;
+  color: $sedona-blue;
+  border: none;
+
+  @include media-tablet {
+    display: none;
+  }
 }

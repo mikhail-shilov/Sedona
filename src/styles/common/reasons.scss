@@ -1,0 +1,39 @@
+@import "../mixins/media";
+
+.reasons {
+  background: $sedona-white;
+  display: flex;
+  flex-direction: column;
+}
+
+.reasons__wrapper {
+  margin: 31px 18px 27px 17px;
+  text-align: center;
+
+  @include media-tablet {
+    margin: 43px 124px 27px 124px;
+  }
+}
+
+.reasons__header {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: $sedona-black;
+  mix-blend-mode: normal;
+}
+
+.reasons__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: $sedona-dark;
+  mix-blend-mode: normal;
+}

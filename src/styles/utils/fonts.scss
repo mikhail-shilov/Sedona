@@ -1,1 +1,22 @@
 // Файл для подключения нестандартных шрифтов
+
+// @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url("/fonts/ptsans.woff2") format("woff2"),
+    url("/fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url("/fonts/ptsansbold.woff2") format("woff2"),
+    url("/fonts/ptsansbold.woff") format("woff");
+}
+

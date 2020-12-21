@@ -2,13 +2,55 @@ extends common/layout
 
 block content
   main.main
-    h2 Title
-    include includes/index/banner
-    hr
-    p paragraph
-    img(src="img/forest.jpg" alt="Forest image")
-    ul.items
-      li.items__t
-      li.items__t
-      li.items__t
-    //- и другие блоки
+    h1.visually-hidden Седона
+    section.welcome
+      h2.visually-hidden Добро пожаловать в великолепную Седону
+      div.welcome__cover
+        img(src="img/welcome.svg" alt="Логотип Because Grand Canyon sucks").welcome__logo
+    section.reasons
+      div.reasons__wrapper
+        h2.reasons__header СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!
+        p.reasons__text Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+      ul
+        li
+          article
+            div
+              p НАСТОЯЩИЙ ГОРОДОК
+              p - №1 -
+              p СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
+            div
+              img(src="img/photo-city1.jpg" alt="Городской вид")
+            div
+              ul
+                li Жилье Рекомендуем пожить в настоящем мотеле, все как в кино!
+                li СУВЕНИРЫ Не только китайского, но и местного производства!
+                li ЕДА Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
+        li
+          article
+            div
+              p ТАМ ЕСТЬ Мост дьявола
+              p — №2 —
+              p Да, по нему можно пройти! Если вы осмелитесь, конечно
+            div
+              img(src="img/photo-bridge.png" alt="Вид на каньон")
+
+        li
+          article
+            div
+              p НЕБОЛЬШАЯ ПЛОЩАДЬ
+              p — №3 —
+              p ВСЕ интересные места находятся очень близко
+        li
+          article
+            div
+              p КРАСИВАЯ ДОРОГА
+              p — №4 —
+              p ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
+        li
+          article
+            div
+              p МАЛО ТУРИСТОВ
+              p — №5 —
+              p Большинство едет в гранд каньон и толпится там
+    section
+      h2 Лучшие предложения гостиниц в Седоне

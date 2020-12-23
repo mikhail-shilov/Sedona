@@ -8,26 +8,35 @@
 }
 
 .welcome__cover {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: $sedona-blue;
-  background-image: url("/img/back-mobile.jpg");
+  background-clip: border-box;
+  background-image: url("/img/bg-back-mobile@1x.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
+  margin: 0 0 0 0;
 
-  &::after {
-    position: absolute;
-    bottom: -1px;
-    display: block;
-    width: 100%;
-    height: 57px;
-    content: "";
-    background-image: url("/img/intro-triangle.svg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-  }
+}
+
+.welcome__cover-triangle {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: -4px;
+  display: inline-block;
+  background: url("/img/bg-intro-triangle-tablet.svg") no-repeat center bottom;
+  border-bottom: 5px $sedona-white solid;
 }
 
 .welcome__logo {
   display: block;
   margin: 90px auto 84px;
+}
+
+.test {
+  position: relative;
+  height: 100%;
+  padding-bottom: 1px;
 }

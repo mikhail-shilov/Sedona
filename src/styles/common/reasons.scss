@@ -30,10 +30,81 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
-  display: flex;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
   color: $sedona-dark;
   mix-blend-mode: normal;
+}
+
+.reasons__list {
+  display: grid;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e";
+
+
+  @include media-tablet {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "a a a"
+      "b b b"
+      "c d e";
+  }
+}
+
+.reasons__area {
+  &--area-a {
+    grid-area: a;
+  }
+
+  &--area-b {
+    grid-area: b;
+  }
+
+  &--area-c {
+    grid-area: c;
+  }
+
+  &--area-d {
+    grid-area: d;
+  }
+
+  &--area-e {
+    grid-area: e;
+  }
+}
+
+
+.reason {
+  display: flex;
+  flex-direction: column;
+
+  @include media-tablet {
+  }
+}
+
+.reason__description {
+  color: $sedona-white;
+  background-color: $sedona-blue;
+  text-align: center;
+  order: 0;
+}
+
+.reason__cover {
+  line-height: 0;
+}
+
+.reason__highlights {
+
+  @include media-tablet {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }

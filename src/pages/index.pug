@@ -5,54 +5,56 @@ block content
     h1.visually-hidden Седона
     section.welcome
       h2.visually-hidden Добро пожаловать в великолепную Седону
-      div.test
-        div.welcome__cover
-          img(src="img/text-sedona-index.svg" width="282" height="214" alt="Логотип Because Grand Canyon sucks").welcome__logo
-          div.welcome__cover-triangle
+      div.welcome__cover
+        img(src="img/text-sedona-index.svg" width="282" height="214" alt="Логотип Because Grand Canyon sucks").welcome__logo
+        div.welcome__cover-triangle
     section.reasons
       div.reasons__wrapper
         h2.reasons__header СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!
         p.reasons__text Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
-      ul.reasons__list
-        li.reasons__area--area-a
-          article.reason
-            div.reason__description
-              h3 НАСТОЯЩИЙ ГОРОДОК
-              p - №1 -
-              p СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
-            div.reason__cover
-              img(src="img/main-city-mobile@2x.jpg" alt="Городской вид")
-            div.reason__highlights
+      ul.grid-3col
+        li.grid-3col__area
+          article.grid-3col.reason
+            div.grid-3col__area.grid-3col__area--1of3.text-card
+              div.text-card__wrapper
+                h3.text-card__header Настоящий городок
+                p.text-card__number - №1 -
+                p.text-card__description Седона не аттракцион для туристов, там течёт своя жизнь
+            div.grid-3col__area.grid-3col__area--2of3.picture-card
+              img(src="img/main-city-mobile@2x.jpg" alt="Городской вид").picture-card__image
+            div.grid-3col__area.reason__highlights
               ul
                 li Жилье Рекомендуем пожить в настоящем мотеле, все как в кино!
                 li СУВЕНИРЫ Не только китайского, но и местного производства!
                 li ЕДА Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
-        li.reasons__area--area-b
-          article.reason
-            div.reason__description
-              h3 ТАМ ЕСТЬ Мост дьявола
-              p — №2 —
-              p Да, по нему можно пройти! Если вы осмелитесь, конечно
-            div.reason__cover
-              img(src="img/photo-bridge-desktop@1x.jpg" alt="Вид на каньон")
+        li.grid-3col__area
+          article.grid-3col.reason
+            div.grid-3col__area.grid-3col__area--1of3.text-card
+                h3.text-card__header Там есть Мост дьявола
+                p.text-card__number — №2 —
+                p.text-card__description Да, по нему можно пройти! Если вы осмелитесь, конечно
+            div.grid-3col__area.grid-3col__area--2of3.grid-3col__area--gofirst.picture-card
+              img(src="img/photo-bridge-desktop@1x.jpg" alt="Вид на каньон").picture-card__image
 
-        li.reasons__area--area-c
+        li.grid-3col__area.grid-3col__area--1of3
           article.reason
-            div.reason__description.reason__description--other
-              h3 НЕБОЛЬШАЯ ПЛОЩАДЬ
-              p — №3 —
-              p ВСЕ интересные места находятся очень близко
-        li.reasons__area--area-d
+            div.text-card.text-card--other
+              div.text-card__wrapper
+                h3.text-card__header НЕБОЛЬШАЯ ПЛОЩАДЬ
+                p.text-card__number — №3 —
+                p.text-card__description ВСЕ интересные места находятся очень близко
+        li.grid-3col__area.grid-3col__area--1of3
           article.reason
-            div.reason__description
-              h3 КРАСИВАЯ ДОРОГА
-              p — №4 —
-              p ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
-        li.reasons__area--area-e
+            div.text-card.text-card--other
+              div.text-card__wrapper
+                h3.text-card__header КРАСИВАЯ ДОРОГА
+                p.text-card__number — №4 —
+                p.text-card__description ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
+        li.grid-3col__area.grid-3col__area--1of3
           article.reason
-            div.reason__description
-              h3 МАЛО ТУРИСТОВ
-              p — №5 —
-              p Большинство едет в гранд каньон и толпится там
+            div.text-card.text-card--other
+              h3.text-card__header МАЛО ТУРИСТОВ
+              p.text-card__number — №5 —
+              p.text-card__description Большинство едет в гранд каньон и толпится там
     section
       h2 Лучшие предложения гостиниц в Седоне

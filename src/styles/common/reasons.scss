@@ -37,65 +37,38 @@
   mix-blend-mode: normal;
 }
 
-.reasons__list {
+.grid-3col {
   display: grid;
   padding: 0;
   list-style: none;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "a"
-    "b"
-    "c"
-    "d"
-    "e";
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
+.grid-3col__area {
+  grid-column-start: span 3;
 
-  @include media-tablet {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-      "a a a"
-      "b b b"
-      "c d e";
+  &--1of3 {
+
+    @include media-tablet {
+      grid-column-start: span 1;
+    }
+  }
+
+  &--2of3 {
+
+    @include media-tablet {
+      grid-column-start: span 2;
+    }
+  }
+
+  &--gofirst {
+
+    @include media-tablet {
+      order: -1;
+    }
   }
 }
 
-.reasons__area {
-  &--area-a {
-    grid-area: a;
-  }
-
-  &--area-b {
-    grid-area: b;
-  }
-
-  &--area-c {
-    grid-area: c;
-  }
-
-  &--area-d {
-    grid-area: d;
-  }
-
-  &--area-e {
-    grid-area: e;
-  }
-}
-
-
-.reason {
-  display: flex;
-  flex-direction: column;
-
-  @include media-tablet {
-  }
-}
-
-.reason__description {
-  color: $sedona-white;
-  background-color: $sedona-blue;
-  text-align: center;
-  order: 0;
-}
 
 .reason__cover {
   line-height: 0;
@@ -107,4 +80,68 @@
     grid-column-start: 1;
     grid-column-end: 3;
   }
+}
+
+.text-card {
+  height: 167px;
+  border-bottom: 1px solid $sedona-black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $sedona-blue;
+  color: $sedona-white;
+  text-transform: uppercase;
+
+  &--other {
+    background-color: $sedona-gray;
+    color: $sedona-black;
+    justify-content: start;
+    padding-top: 42px;
+  }
+
+  @include media-tablet {
+    height: 256px;
+    border-bottom: none;
+  }
+}
+
+.text-card__header {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  margin: 0 50px;
+}
+
+.text-card__number {
+  margin-top: 10px;
+  margin-bottom: 21px;
+  font-size: 14px;
+}
+
+.text-card__description {
+  font-size: 14px;
+  line-height: 21px;
+  mix-blend-mode: normal;
+  margin: 0 35px;
+}
+
+.picture-card {
+  height: 256px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $sedona-blue;
+  color: $sedona-white;
+}
+
+.picture-card__image {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }

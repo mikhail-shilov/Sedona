@@ -1,17 +1,13 @@
 @import "../mixins/media";
 
 .container {
-  /*
   min-width: 320px;
-  max-width: 320px;
-  */
-  width: 320px;
+  max-width: 768px;
+  width: 100%;
   margin: 0 auto;
   background-color: $sedona-white;
   mix-blend-mode: normal;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
-
 }
 
 .visually-hidden {
@@ -50,6 +46,13 @@
 
     @include media-tablet {
       order: -1;
+    }
+  }
+
+  &--golast {
+
+    @include media-tablet {
+      order: 10;
     }
   }
 }

@@ -27,6 +27,7 @@
   }
 
   @include media-tablet {
+    height: 518px;
     background-image: url("/img/bg-back-tablet@1x.jpg");
     background-size: 768px auto;
 
@@ -58,4 +59,12 @@
 .welcome__logo {
   display: block;
   margin-top: 90px;
+  width: 282px;
+  height: 214.24px;
+
+  @include media-tablet {
+    margin-top: 77px;
+    width: 461px;
+    height: 349.97px;
+  }
 }

@@ -5,8 +5,7 @@
 }
 
 .hotels__headers-wrapper {
-  width: 280px;
-  margin: 0 auto;
+  margin: 0 20px;
   background-color: $sedona-white;
   height: 299px;
   display: flex;
@@ -39,6 +38,7 @@
   font-family: "PT Sans", sans-serif;
   margin-top: 27px;
   width: 100%;
+  max-width: 458px;
   height: 58px;
   background-color: $sedona-blue;
   font-style: normal;

@@ -5,7 +5,7 @@ block content
     h1.visually-hidden Седона
     section.welcome
       h2.welcome__header.visually-hidden Добро пожаловать в великолепную Седону
-      div.welcome__cover.container--expand
+      div.welcome__cover
         img(src="img/text-sedona-index.svg" width="282" height="214" alt="Логотип Because Grand Canyon sucks").welcome__logo
         div.welcome__cover-triangle
     section.reasons
@@ -15,25 +15,28 @@ block content
       ul.reasons__list.grid-3col
         li.grid-3col__row.reasons__list--featured
           article.grid-3col.reason
-            div.text-card.text-card--first.container--expand.grid-3col__row--1of3
+            div.text-card.text-card--first.grid-3col__row--1of3
               h3.text-card__header Настоящий городок
               p.text-card__number — №1 —
               p.text-card__description Седона не аттракцион для туристов, там течёт своя жизнь
-            div.grid-3col__row--2of3.picture-card.container--expand
-              img(src="img/main-city-mobile@2x.jpg" alt="Городской вид").picture-card__image
+            div.grid-3col__row--2of3.picture-card
+              picture
+                source(media='(min-width: 1200px)' srcset='img/main-city-desktop@1x.jpg')
+                source(media='(width: 320px)' srcset='img/main-city-mobile@1x.jpg')
+                img(src='img/main-city-tablet@1x.jpg' srcset='img/main-city-tablet@1x.jpg' alt='Городской вид' ).picture-card__image
             div.highlights.grid-3col__row
               ul.highlights__list.grid-3col
                 li.highlights_item.grid-3col__row--1of3
-                  h4.highlights_item__header Жилье
                   img(src="img/icon-house.svg" alt="Иконка домик" width="39").highlights_item__icon.highlights_item__icon--house
+                  h4.highlights_item__header Жилье
                   p.highlights_item__lead Рекомендуем пожить в настоящем мотеле, все как в кино!
-                li.highlights_item.grid-3col__row--1of3
-                  h4.highlights_item__header Сувениры
+                li.highlights_item.grid-3col__row--1of3.grid-3col__row--golast
                   img(src="img/icon-gift.svg" alt="Иконка подарок" width="32").highlights_item__icon.highlights_item__icon--gift
+                  h4.highlights_item__header Сувениры
                   p.highlights_item__lead Не только китайского, но и местного производства!
                 li.highlights_item.grid-3col__row--1of3
-                  h4.highlights_item__header Еда
                   img(src="img/icon-burger.svg" alt="Иконка бургер" width="40").highlights_item__icon.highlights_item__icon--burger
+                  h4.highlights_item__header Еда
                   p.highlights_item__lead Всегда заказывайте фирменный бургер, вы не разочаруетесь!
         li.grid-3col__row.reasons__list--featured
           article.grid-3col.reason
@@ -66,7 +69,7 @@ block content
         h2.hotels__header Заинтересовались?
         p.hotels__lead Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
         button.hotels__button Найти гостиницу
-      div.hotels__map-wrapper.container--expand
+      div.hotels__map-wrapper
         picture
           source(media='(min-width: 1200px)' srcset='img/bg-map-desktop@1x.jpg')
           source(media='(min-width: 768px)' srcset='img/bg-map-tablet@1x.jpg')

@@ -1,24 +1,28 @@
 @import "../mixins/media";
 
 .reasons {
-  background: $sedona-gray;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .reasons__header-wrapper {
   height: 221px;
+  max-width: 520px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: $sedona-white;
+
+  @include media-tablet {
+    height: 206px;
+  }
 }
 
 .reasons__header {
-  display: inline-block;
+  display: block;
   text-align: center;
-  width: 285px;
-  margin-top: 32px;
+  margin: 32px 17px 0;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -26,13 +30,17 @@
   text-transform: uppercase;
   color: $sedona-black;
   mix-blend-mode: normal;
+
+  @include media-tablet {
+    margin-top: 43.5px;
+    font-size: 21px;
+  }
 }
 
 .reasons__lead {
   display: inline-block;
   text-align: center;
-  width: 285px;
-  margin-top: 32px;
+  margin: 32px 17px 0;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -48,7 +56,8 @@
   margin: 0;
   list-style: none;
 
-  &--featured {}
+  &--featured {
+  }
 
   &--general {
     padding-top: 27px;
@@ -70,10 +79,13 @@
   background-color: $sedona-gray;
 }
 
-
 .highlights {
   padding: 35px 20px;
   background: $sedona-white;
+
+  @include media-tablet {
+    padding: 0;
+  }
 }
 
 .highlights__list {
@@ -82,11 +94,18 @@
 }
 
 .highlights__list li + li {
-  margin-top: 26px;
+
+  @include media-only-mobile {
+    margin-top: 26px;
+  }
 }
 
 .highlights_item {
   position: relative;
+
+  @include media-tablet {
+    height: 330px;
+  }
 }
 
 .highlights_item__header {
@@ -97,41 +116,88 @@
   text-transform: uppercase;
   color: $sedona-dark;
   mix-blend-mode: normal;
-  padding-left: 48px;
-}
+  margin-top: 0;
+  margin-left: 48px;
 
-.highlights_item__icon {
-  position: absolute;
-
-  &--house {
-    width: 39px;
-    top: -8px;
-    left: 0;
-  }
-
-  &--gift {
-    width: 32px;
-    top: -9px;
-    left: 4px;
-  }
-
-  &--burger {
-    width: 40px;
-    top: -4px;
-    left: -3px;
+  @include media-tablet {
+    margin-top: 157px;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 21px;
   }
 }
 
 .highlights_item__lead {
   margin-top: 16px;
-  padding-left: 48px;
+  margin-left: 48px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   color: $sedona-dark;
+
+  @include media-tablet {
+    margin: 24px 25px 0;
+    text-align: center;
+  }
 }
+
+.highlights_item__icon {
+  position: absolute;
+
+  @include media-tablet {
+    width: 75px;
+
+  }
+
+  &--house {
+    width: 39px;
+    top: -8px;
+    left: 0;
+
+    @include media-tablet {
+      width: 75px;
+      top: auto;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 198px;
+    }
+  }
+
+  &--gift {
+    width: 32px;
+    top: -9px;
+    left: 4px;
+
+    @include media-tablet {
+      width: 64px;
+      top: auto;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 198px;
+    }
+  }
+
+  &--burger {
+    width: 40px;
+    top: -4px;
+    left: -3px;
+
+    @include media-tablet {
+      width: 76px;
+      top: auto;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 198px;
+    }
+  }
+}
+
 
 .text-card {
   height: 191px;
@@ -146,10 +212,6 @@
   &--first {
     height: 211px;
     padding-top: 55px;
-  }
-
-  &--other + &--other {
-    border: 4px darkblue solid;
   }
 
   @include media-tablet {
@@ -203,6 +265,11 @@
   background-color: $sedona-blue;
   color: $sedona-white;
   margin: 0 -1px;
+
+  @include media-tablet {
+    height: 256px;
+    border-bottom: none;
+  }
 }
 
 .picture-card__image {

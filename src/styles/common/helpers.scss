@@ -1,0 +1,55 @@
+@import "../mixins/media";
+
+.container {
+  /*
+  min-width: 320px;
+  max-width: 320px;
+  */
+  width: 320px;
+  margin: 0 auto;
+  background-color: $sedona-white;
+  mix-blend-mode: normal;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.grid-3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-3col__row {
+  grid-column-start: span 3;
+
+  &--1of3 {
+    grid-column-start: span 3;
+
+    @include media-tablet {
+      grid-column-start: span 1;
+    }
+  }
+
+  &--2of3 {
+    grid-column-start: span 3;
+
+    @include media-tablet {
+      grid-column-start: span 2;
+    }
+  }
+
+  &--gofirst {
+
+    @include media-tablet {
+      order: -1;
+    }
+  }
+}

@@ -7,9 +7,16 @@
   }
 }
 
-@mixin media-laptop {
+@mixin media-desktop {
 
-  @media (min-width: $mediaWidthLaptop) {
+  @media (min-width: $mediaWidthDesktop) {
+    @content;
+  }
+}
+
+@mixin media-only-mobile {
+
+  @media (max-width: $mediaWidthOnlyMobile) {
     @content;
   }
 }

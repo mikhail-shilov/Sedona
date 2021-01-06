@@ -1,0 +1,69 @@
+@import "../mixins/media";
+
+.hotels {
+
+}
+
+.hotels__headers-wrapper {
+  width: 280px;
+  margin: 0 auto;
+  background-color: $sedona-white;
+  height: 299px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hotels__header {
+  margin-top: 35px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: $sedona-black;
+}
+
+.hotels__lead {
+  margin-top: 21px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $sedona-dark;
+  text-align: center;
+}
+
+.hotels__button {
+  font-family: "PT Sans", sans-serif;
+  margin-top: 27px;
+  width: 100%;
+  height: 58px;
+  background-color: $sedona-blue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $sedona-white;
+  border: none;
+}
+
+.hotels__map-wrapper {
+  position: relative;
+  line-height: 0;
+}
+
+.hotels__map-image {
+
+}
+
+.hotels__map-marker {
+  position: absolute;
+  top: 154px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

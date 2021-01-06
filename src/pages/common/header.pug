@@ -1,5 +1,8 @@
-header.header
-  img(src='img/logo-sedona-mobile.svg' alt='Logotype of Sedona' width='102' height='85').header__logo
+header.header.container--expand
+  picture
+    source(media='(min-width: 1200px)' srcset='img/logo-sedona-desktop.svg')
+    source(srcset='img/logo-sedona-tablet.svg' media='(min-width: 768px)')
+    img(src='img/logo-sedona-mobile.svg' srcset='img/logo-sedona-mobile.svg' width='100' height='84' alt='Logotype of Sedona' ).header__logo
   nav.header__nav.nav-menu
     ul.nav-menu__list
       li.nav-menu__item.nav-menu__item Главная
@@ -8,6 +11,6 @@ header.header
       li.nav-menu__item.nav-menu__item HTML Academy
     button(aria-label="Меню").nav-menu__switcher
       img(src="img/icon-menu.svg"
-          width="23"
-          height="22"
-          alt="Иконка гамбургер")
+        width="23"
+        height="22"
+        alt="Иконка гамбургер")

@@ -9,12 +9,22 @@
 }
 
 .header__logo {
+  width: 100px;
   display: block;
   position: absolute;
   margin: auto;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 1;
+
+  @include media-tablet {
+    width: 100px;
+  }
+
+  @include media-desktop {
+    width: 186.6px;
+  }
 }
 
 .header__nav {

@@ -1,21 +1,24 @@
 @import "../mixins/media";
 
 .reasons {
-  background: $sedona-white;
+  background: $sedona-gray;
   display: flex;
   flex-direction: column;
 }
 
-.reasons__wrapper {
-  margin: 31px 18px 27px 17px;
-  text-align: center;
-
-  @include media-tablet {
-    margin: 43px 124px 27px 124px;
-  }
+.reasons__header-wrapper {
+  height: 221px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $sedona-white;
 }
 
 .reasons__header {
+  display: inline-block;
+  text-align: center;
+  width: 285px;
+  margin-top: 32px;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -25,80 +28,128 @@
   mix-blend-mode: normal;
 }
 
-.reasons__text {
+.reasons__lead {
+  display: inline-block;
+  text-align: center;
+  width: 285px;
+  margin-top: 32px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
   align-items: center;
-  text-align: center;
   text-transform: uppercase;
   color: $sedona-dark;
   mix-blend-mode: normal;
 }
 
-.grid-3col {
-  display: grid;
+.reasons__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &--featured {}
+
+  &--general {
+    padding-top: 27px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: $sedona-gray;
+    height: 167px;
+    color: $sedona-black;
+  }
+
+  @include media-only-mobile {
+    &--general + &--general {
+      border-top: 1px $sedona-more-gray solid;
+    }
+  }
+}
+
+.reasons__general-wrapper {
+  background-color: $sedona-gray;
+}
+
+
+.highlights {
+  padding: 35px 20px;
+  background: $sedona-white;
+}
+
+.highlights__list {
   padding: 0;
   list-style: none;
-  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.grid-3col__area {
-  grid-column-start: span 3;
+.highlights__list li + li {
+  margin-top: 26px;
+}
 
-  &--1of3 {
+.highlights_item {
+  position: relative;
+}
 
-    @include media-tablet {
-      grid-column-start: span 1;
-    }
+.highlights_item__header {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: $sedona-dark;
+  mix-blend-mode: normal;
+  padding-left: 48px;
+}
+
+.highlights_item__icon {
+  position: absolute;
+
+  &--house {
+    width: 39px;
+    top: -8px;
+    left: 0;
   }
 
-  &--2of3 {
-
-    @include media-tablet {
-      grid-column-start: span 2;
-    }
+  &--gift {
+    width: 32px;
+    top: -9px;
+    left: 4px;
   }
 
-  &--gofirst {
-
-    @include media-tablet {
-      order: -1;
-    }
+  &--burger {
+    width: 40px;
+    top: -4px;
+    left: -3px;
   }
 }
 
-
-.reason__cover {
-  line-height: 0;
-}
-
-.reason__highlights {
-
-  @include media-tablet {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
+.highlights_item__lead {
+  margin-top: 16px;
+  padding-left: 48px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: $sedona-dark;
 }
 
 .text-card {
-  height: 167px;
-  border-bottom: 1px solid $sedona-black;
+  height: 191px;
+  padding-top: 39px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
   background-color: $sedona-blue;
   color: $sedona-white;
-  text-transform: uppercase;
+  margin: 0 -1px;
 
-  &--other {
-    background-color: $sedona-gray;
-    color: $sedona-black;
-    justify-content: start;
-    padding-top: 42px;
+  &--first {
+    height: 211px;
+    padding-top: 55px;
+  }
+
+  &--other + &--other {
+    border: 4px darkblue solid;
   }
 
   @include media-tablet {
@@ -108,27 +159,41 @@
 }
 
 .text-card__header {
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
   font-weight: bold;
-  margin: 0 50px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+
 }
 
 .text-card__number {
-  margin-top: 10px;
-  margin-bottom: 21px;
+  margin-top: 13px;
   font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .text-card__description {
+  margin-top: 20px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
   font-size: 14px;
   line-height: 21px;
   mix-blend-mode: normal;
-  margin: 0 35px;
+  text-transform: uppercase;
+}
+
+.text-card__wrapper {
+  margin: 0 13px;
+  height: 100%;
 }
 
 .picture-card {
-  height: 256px;
+  height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,6 +202,7 @@
   text-align: center;
   background-color: $sedona-blue;
   color: $sedona-white;
+  margin: 0 -1px;
 }
 
 .picture-card__image {
